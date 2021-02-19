@@ -1,5 +1,5 @@
   
-FROM python:3.7-slim-buster
+FROM python:3.10.0a5-buster
 LABEL maintainer="Belkacem"
 
 RUN apt-get update && apt-get install -y python3-dev build-essential
@@ -8,7 +8,7 @@ RUN mkdir -p /usr/src/rk
 WORKDIR /usr/src/rk
 
 COPY requirements.txt .
-RUN pip3 install -r requirements.txt
+RUN pip install -r requirements.txt
 
 COPY . .
 
