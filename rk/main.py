@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from rk.scripts import rabin_karp_matcher
+from fastapi.middleware.cors import CORSMiddleware
 
 class Message(BaseModel):
     message: str
