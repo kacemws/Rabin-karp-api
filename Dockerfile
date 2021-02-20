@@ -8,7 +8,7 @@ RUN mkdir -p /usr/src/rk
 WORKDIR /usr/src/rk
 
 COPY requirements.txt .
-RUN pip install fastapi[all]
+RUN pip install -r requirements.txt
 
 COPY . .
 
